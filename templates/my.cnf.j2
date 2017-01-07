@@ -48,7 +48,7 @@ character-set-server     = utf8
 collation-server         = utf8_general_ci
 datadir                  = {{ mariadb_data_dir }}
 default-storage-engine   = InnoDB
-key-buffer               = 64M
+key-buffer-size          = 64M
 lc-messages              = en_US
 lc-messages-dir          = {{ mariadb_share_dir }}
 log-error                = {{ mariadb_mysqld_errorlog }}
@@ -59,18 +59,17 @@ myisam-sort-buffer       = 8M
 net-buffer-length        = 16K
 pid-file                 = {{ mariadb_pid }}
 port                     = {{ mariadb_port }}
-read-buffer              = 256K
-read-rnd-buffer          = 512K
+read-buffer-size         = 256K
+read-rnd-buffer-size     = 512K
 server-id                = {{ mariadb_server_id }}
 skip-external-locking
 socket                   = {{ mariadb_socket }}
-sort-buffer              = 8M
+sort-buffer-size         = 8M
 table-open-cache         = 64
 thread-cache-size        = 128
 tmpdir                   = /tmp/
 user                     = mysql
 
-innodb-additional-mem-pool     = 4M
 innodb-buffer-pool-size        = 64M
 innodb-data-file-path          = ibdata1:10M:autoextend:max:128M
 innodb-file-per-table
