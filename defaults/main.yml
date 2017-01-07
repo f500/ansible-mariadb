@@ -21,4 +21,4 @@ mariadb_share_dir: "/usr/share/mysql"
 mariadb_skip_charset_handshake: true
 mariadb_skip_networking: false
 mariadb_socket: "/var/run/mysqld/mysqld.sock"
-mariadb_vesion: 5.5
+mariadb_version: 10.2
